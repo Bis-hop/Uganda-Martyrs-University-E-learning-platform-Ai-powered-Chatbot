@@ -1,0 +1,636 @@
+version: '3.1'
+intents:
+- Agriculture_programmes
+- Appreciate
+- BAM_programmes
+- BuiltEnvironment_programmes
+- dean_of_students
+- Dean_Agriculture
+- Dean_BAM
+- Dean_Education
+- Dean_FOBE
+- Dean_engineering
+- Dean_health_Sciences
+- Dean_law
+- Dean_science
+- Education_programmes
+# - email_id
+# - user_name
+- Engineering_programmes
+- results
+- Enrollment_key
+- Ethics
+- Faculties
+- Graphics
+- Health_sciences_programmes
+- Kasozi
+- Law_courses
+- Moodle_Register
+- Moodle_login
+# - names
+- New_here
+- Otala
+- Requirements_to_join_moodle
+- Science_programmes
+- Show_enrollment
+- Software
+- Students_portal
+# - TT
+- UMU_website
+- about_moodle
+- about_university
+# - data
+- affirm
+- bot_challenge
+- campuses
+- deny
+# - email_address
+- goodbye
+- greet
+- help
+- library
+# - lname
+- mood_great
+- mood_unhappy
+- umu
+- VC
+- DVC
+- CFO
+- HR
+- chancellor
+- registrar
+- updates
+- Reply
+- search
+- missing_units
+- Greeting
+responses:
+  utter_hi: 
+    - text: 'Am well, how about you ?'
+  utter_greet:
+    - text: 'Hi welcome to the Martyrs Ai Assistant?'
+      custom:
+        payload: dropDown
+        data:
+        - label: option1
+          value: "/goodbye{'slot_name':'option1'}"
+        - label: option2
+          value: "/goodbye{'slot_name':'option2'}"
+        - label: option3
+          value: "/updates{'slot_name':'option3'}"
+      # image: assets/sponsor.jpeg 
+  # - custom:
+  #     payload: "carousel"
+  #     data:
+  #       elements:
+  #         - title: "Card 1"
+  #           subtitle: "Subtitle 1"
+  #           image_url: "http://example.com/image1.jpg"
+  #           default_action:
+  #             type: "web_url"
+  #             url: "http://example.com"
+  #           buttons:
+  #             - type: "web_url"
+  #               url: "http://example.com/button1"
+  #               title: "Button 1"
+  #         - title: "Card 2"
+  #           subtitle: "Subtitle 2"
+  #           image_url: "http://example.com/image2.jpg"
+  #           default_action:
+  #             type: "web_url"
+  #             url: "http://example.com"
+  #           buttons:
+  #             - type: "web_url"
+  #               url: "http://example.com/button2"
+  #               title: "Button 2"
+  # utter_greet:
+  #   - text: "This is a tooltip message"
+      # custom:
+      #   tooltipPayload: "Here is some helpful information."
+  utter_reply:
+    - text: 'Great! how can i help you today?'
+  # - custom:
+
+  #     type: carousel
+  #     elements:
+  #     - title: Masaka
+  #       subtitle: this is located in masaka city
+  #       image_url: /assets/chapel.jpeg
+  #       buttons:
+  #       - title: Check out
+  #         payload: /greet
+  #       - title: Cancel
+  #         payload: /name
+  #     - title: Rubaga
+  #       subtitle: Subtitle 2
+  #       image_url: /assets/admissions.jpeg
+  #       buttons:
+  #       - title: Check out
+  #         payload: /goodbye
+  #       - title: Cancel
+  #         payload: /about_moodle
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: 'Did that help you?'
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+    custom: 
+        payload: pdf_attachment
+        title: "PDF Title"
+        url: "URL to PDF file"
+    # image: assets/Motion.gif
+  utter_iamabot:
+  - text:  |
+      I am the Martyrs AI Assistant created to provide virtual assistance to the students and staff  on the Uganda Martyrs University E-learning platform ,
+      - Created by: Wanyela Timothy
+  utter_university:
+  - text: What do you want to know about Uganda Martyrs University?
+  utter_faculty:
+  - text: 'What faculty do you belong to?'
+  - text: 'Uganda Martyrs University has eight faculties on each of its campuses'
+  utter_moodle:
+  - text: Are you registered on Moodle?
+    buttons:
+    - title: "Yes"
+      payload: " /help"
+      image: assets/blue and white.jpg
+    - title: "No"
+      payload: " /New_here"
+      image: assets/blue and white.jpg
+  utter_Students_portal:
+  - text: " To access the Students portal [Click here](https://student.umu.ac.ug/portal-2.5/?cache)"
+    # buttons:
+    # - title: '  Student Portal'
+    #   payload: /https://student.umu.ac.ug/portal-2.5/?cache
+      # type: web_url
+      # url: "https://student.umu.ac.ug/portal-2.5/?cache"
+  utter_UMU_website:
+  - text: "To access the Students Uganda Martyrs official website [Click here](https://umu.ac.ug/new/)"
+    buttons:
+    - title: '  [Go to the UMU official website](https://umu.ac.ug/new/)'
+      payload: "https://umu.ac.ug/new/" 
+      # type: web_url
+      # url: https://umu.ac.ug/new/
+  utter_library:
+  - text: "To access Arch Bishop Kiwanuka Memorial library  [Click here](http://196.43.180.12/)"
+    custom:
+      payload: quickReplies
+      data:
+      - title: chip1
+        payload: chip1_payload
+      - title: chip2
+        payload: chip2_payload
+      - title: chip3
+        payload: chip3_payload
+    # buttons:
+    # - title: '  Visit the Library '
+    #   payload: /http://196.43.180.12/
+    #   type: web_url
+      # url: http://196.43.180.12/
+  utter_New_here:
+  - text: ' If you are new to moodle/E-learning, please reach out the system Administrator to register you in the system and you will be provided with a university email address that you will use to join'
+
+  utter_help:
+  - text: "Great, how may I help you please?"
+    custom: 
+        payload: "collapsible"
+        data: 
+        - title: Sick Leave
+          description: Sick leave is time off from work that workers can use to stay home
+            to address their health and safety needs without losing pay.
+        - title: Earned Leave
+          description: 'Earned Leaves are the leaves which are earned in the previous year
+            and enjoyed in the preceding years. '
+        - title: Casual Leave
+          description: Casual Leave are granted for certain unforeseen situation or were you
+            are require to go for one or two days leaves to attend to personal matters and
+            not for vacation.
+        - title: Flexi Leave
+          description: Flexi leave is an optional leave which one can apply directly in system
+            at lease a week before.
+  utter_Appreciate:
+  - text: "Glad to help!"
+  utter_Moodle_login:
+  - text: |
+      Steps to log into moodle/E- learning platform include the following:
+      - Step 1:
+      - Open Your Web Browser: Launch any web browser installed on your device (e.g., Chrome, Firefox, Safari).
+      - Step 2:
+      - Step 3:
+      - Navigate to the Login Page Once you reach the Moodle/E-learning  homepage, look for the"Login" button located at the top right corner of the page. or scroll down to the bottom and "click" it.
+      - Step 4:
+      - Choose Google Login Option: On the Moodle login page, you may see an option to log in with Google. Click on this option.
+      - Step 5:
+      - Select Your Google Account: A Google sign-in page will appear. Enter your Gmail address (your Google account e.g timothy.wanyela@stud.umu.ac.ug) and click "Next".
+      - Step 6:
+      - Enter Your Google Password; Enter your Google account password and click "Next" to proceed.
+      - Step 7:
+      - Authorize Moodle: If this is your first time logging into Moodle/E-learning platform with your Google account, you may be asked to authorize Moodle to access your Google account information. Review the permissions requested and click "Allow" or "Authorize" to proceed.
+      - Step 6:
+      - Access Your Dashboard: Once logged in successfully, you are redirected to your Moodle/E-learning dashboard or the main course page where you will have access your courses, assignments, and other materials.
+      - Step 7:
+      - Logout, After you're done using Moodle, it's good practice to log out by clicking on the "Logout" or "Sign out" button at the top right hand corner.
+    attachment: { "type":"video",  "payload":{ "title":" Watch tutorial below of how  log into moodle/E-learning platform","src":"assets/How to log into moodle.mp4" } } 
+  utter_Moodle_Register:
+  - text: If you are new to moodle/E-learning, please reach out the system Administrator to register you in the system and you will be provided with a university email address that you will use to join
+  utter_Education_programmes:
+  - text: |
+      In the faculty of Education we have the following courses:
+      - Bachelor of Arts English Language and Literature in English    
+      - Bachelor of Arts with Education    3 Years    
+      - Bachelor of Arts with Education    3 Years    
+      - Bachelor of Education (Primary)    3 Years   
+      - Bachelor of Education Early Childhood Development    
+      - Bachelor of Inclusive Deaf Education (Arts and Sciences)    
+      - Bachelor of Science with Education    3 Years  
+      - Bachelor of Science with Education Agriculture    3 Years    
+      - Diploma in Early Childhood Development Education    2 Years    
+      - Diploma in Education (Primary)    2 Years    Distance Learning
+      - Higher Education Certificate (Arts/Sciences) (New)    
+      - Master of Arts in Education and Development    2 Years    
+      - Master of Education    2 Years    
+      - Master of Education    2 Years    
+      - Master of Education    2 Years    
+      - Postgraduate Diploma in Education    1 Year   
+      - Postgraduate Diploma in Inclusive Education   
+      - Postgraduate Diploma in Teaching and Learning in Higher Education    2 Years    
+  utter_Science_programmes:
+  - text: |
+      In the faculty of Science we have the following courses:
+      - Bachelor of Science (Mathematics, Chemistry, Physics, Statistics)    3 Years    
+      - Bachelor of Science in Computer Science    3 Years    
+      - Bachelor of Science in Economics and Statistics    3 Years    
+      - Bachelor of Science in Financial Mathematics    3 Years   
+      - Bachelor of Science in Information Technology    3 Years    
+      - Certificate in Information Technology    2 Years    
+      - Certificate in Library and Information Science    2 Years    
+      - Certificate in Science Laboratory Technology    2 Years    
+      - Diploma in Computer Science and Information Technology    2 Years  
+      - Diploma in Science Laboratory Technology    2 Years    
+      - Master of Science in ICT Management, Policy and Architectural Design    2 Years    
+      - Master of Science in Information Systems    2 Years    
+  utter_Law_courses:
+  - text: |
+      In the faculty of Law we have Bachelor of Laws which goes for 4 Years
+  utter_BuiltEnvironment_programmes:
+  - text: |
+      In the faculty of Built Environment we have the following courses:
+      - Advanced Diploma in Environmental Design    2 Years
+      - Bachelor of Environmental Design (Pre-requisite for Architecture/Landscape Architecture/Urban Planning)    3 Years
+      - Master of Architecture (Professional)    2 Years
+  utter_BAM_programmes:
+  - text: |
+      In the faculty of Business Administration we have the following courses:
+      - Bachelor of Arts in Microfinance and Community Development    3 Years    
+      - Bachelor of Business Administration and Management    3 Years    
+      - Bachelor of International Business Management    3-4 Years    
+      - Bachelor of Procurement and Supply Chain Management    3 Years    
+      - Bachelor of Real Estate Management    3 Years   
+      - Bachelor of Science in Accounting and Finance    3 Years    
+      - Bachelor of Science in Business Economics    3 Years    
+      - Bachelor of Science in Development Economics    3 Years  
+      - Bachelor of Science in Economics and Natural Resources Management    3 Years   
+      - Bachelor of Transport and Logistics Management    3 Years   
+      - Certificate in Business Administration and Management    2 Years    
+      - Certificate in Records and Information Management    2 Years    
+      - Diploma in Accounting and Finance    2 Years    PT
+      - Diploma in Business Administration and Management    2 Years   
+      - Diploma in Microfinance    2 Years    
+      - Diploma in Procurement and Stores Management    2 Years    
+      - Diploma in Records and Information Management    2 Years   
+      - E4Impact MBA in Impact Entrepreneurship    2 Years    PT
+      - Master of Arts in Microfinance Management    2 Years    
+      - Master of Business Administration    2 Years    
+      - Master of Science in Development Economics    2 Years    
+  utter_Health_sciences_programmes:
+  - text: |
+      In the faculty of Health Sciences we have the following courses:
+      - Advanced Diploma in Clinical Mentoring    2 Years   
+      - Advanced Diploma in Health Promotion and Education    2 Years   
+      - Advanced Diploma in Health Services Management    2 Years   
+      - Bachelor of Arts in Counselling Psychology    3 Years    
+      - Bachelor of Midwifery Sciences    3 Years    Fulltime
+      - Bachelor of Public Health and Health Promotion    3 Years    
+      - Certificate in Child and Adolescent Counselling    2 Years    
+      - Certificate in Health Promotion and Education    2 Years    
+      - Certificate in HIV/AIDS Counselling    2 Years    Fulltime
+      - Certificate in Medical Records and Informatics Management    2 Years  
+      - Certificate in Public Health and Health Promotion    2 Years   
+      - Diploma in Counselling Psychology    2 Years   
+      - Diploma in Health Promotion and Education    2 Years   
+      - Diploma in Health Services Management    2 Years    
+      - Master of Arts in Counselling Psychology    2 Years   
+      - Master of Medicine in Internal Medicine    3 Years    
+      - Master of Public Health in Health Promotion    2 Years    
+      - Master of Public Health in Population and Reproductive Health    2 Years    
+      - Master of Science in Health Services Management    2 Years    
+      - Ordinary Diploma in Clinical Mentoring    2 Years    
+  utter_Engineering_programmes:
+  - text: |
+      In the faculty of Engineering we have the following courses:
+      - Certificate in Automobile Mechanics    2 
+      - Certificate in Building and Construction    2 Years    
+      - Certificate in Electrical Installation and Systems Maintenance    2 Years    
+      - Certificate in Fashion and Garment Design    2 Years    
+      - Certificate in Fitting and Machining    2 Years    
+      - Certificate in Plumbing    2 Years    
+      - Certificate in Welding and Metal Fabrication    2 Years   
+      - Certificate in Wood Technology    2 Years    
+      - Diploma in Civil Engineering    2 Years    
+      - Diploma in Electrical Engineering    2 Years    
+      - Diploma in Mechanical Engineering    2 Years    
+      - Diploma in Water Engineering    2 Years    
+  utter_Agriculture_programmes:
+  - text: |
+      In the faculty of Agriculture we have the following courses:
+      - Bachelor of Agricultural Economics and Agribusiness Management    3 Years    
+      - Bachelor of Agriculture    3 Years    
+      - Bachelor of Science in Agricultural Technology    4 Years   
+      - Bachelor of Science in Agriculture    4 Years    
+      - Certificate in Agriculture    2 Years    
+      - Certificate in Agriculture    2 Years   
+      - Diploma in Agricultural Economics and Agribusiness Management    2 Years   
+      - Diploma in Animal Production and Farm Management    2 Years   
+      - Diploma in Animal Production and Farm Management    2 Years    
+      - Diploma in Animal Production and Farm Management    2 Years 
+      - Diploma in Crop Production and Farm Management    2 Years    
+      - Diploma in Crop Production and Farm Management    2 Years    
+      - Diploma in Crop Production and Farm Management    2 Years    
+      - Master of Science in Monitoring and Evaluation    2 Years    
+  utter_campuses:
+  - text: |
+      Uganda Martyrs University has six  Campuses listed below:
+      - 1 MasaKa Campus
+      - 2 Rubaga Campus
+      - 3 Mbale Campus
+      - 4 Ngetta Campus
+      - 5 Fort Portal Campus 
+      - 6 Nkozi Main Campus
+  utter_requirements:
+  - text: |
+      - Must be a registered student of Uganda Martyrs University
+      - Must have a student email for the University(e.g timothy.wanyela@stud.umu.ac.ug)
+      - Must be enrolled in any running module 
+  utter_results:
+  - text: 'What faculty do you belong to? '
+    buttons:
+    - title: "Science"
+      payload: " /updates"
+      image: assets/blue and white.jpg
+    - title: "Law"
+      payload: " /updates"
+    - title: "Education"
+      payload: " /updates"
+      image: assets/blue and white.jpg
+    - title: "BAM"
+      payload: " /updates"
+    - title: "FOBE"
+      payload: " /updates"
+      image: assets/blue and white.jpg
+    - title: "SASS"
+      payload: " /updates"
+    # custom:
+    #   payload: dropDown
+    #   data:
+    #   - label: Science
+    #     value: /inform{'slot_name':'Science'}
+    #   - label: Education
+    #     value: /inform{'slot_name':' Education'}
+    #   - label: Agriculture
+    #     value: /inform{'slot_name':'Agriculture'}
+    #   - label: Law
+    #     value: /inform{'slot_name':'Law'}
+    #   - label: Business Administration
+    #     value: /inform{'slot_name':' Business Administration'}
+    #   - label: Built Environment
+    #     value: /inform{'slot_name':'Built Environment'}
+    #   - label: SWASA
+    #     value: /inform{'slot_name':'SWASA'}
+  utter_Dean_science:
+  - text: |
+      Rev. Fr. Dr. Henry Nsubuga Kiwanuka
+      Dip. Phil. (Katigondo); MA Div.;
+      MA RS (St. John’s Seminary, California);
+      BSc. (Hons) Math/Econ (San Francisco, California); 
+      MSc. Math (Marquette University, Wisconsin);
+      PhD(KU Leuven) 
+    image: /assets/Rev.-Fr.-Dr.-Henry-Nsubuga-Kiwanuka-Dean-Faculty-of-Science.jpg
+  utter_Dean_law:
+  - text: Prof. Frederick Jjuuko
+  utter_ Dean_Education:
+  - text: |
+      Ms. Nayebare Creatoris Ag.
+      Dean, Faculty of Education
+    image: assets/Ms.-Nayebare-Creatoris-Ag.-Dean-Faculty-of-Education.jpg
+  utter_ Dean_health_Sciences:
+  - text: ' Dr. Agnes Napyo'
+    image: ' assets/Dr.-Agnes-Napyo-Dean-Faculty-of-Health-Sciences.jpg'
+  utter_ Dean_engineering:
+  - text: |
+      Eng. Burolerro James Ag. 
+      Dean,Faculty of Engineering & Applied Sciences
+    image: assets/Eng.-Burolerro-James-Ag.-Dean-Faculty-of-Engineering-Applied-Sciences.jpg
+  utter_Dean_BAM:
+  - text: ' Mr. Cyprian Ssebagala Lecturer/ Associate Dean'
+    image: ' assets/Mr.-Ssebagala-Cyprian-AG.-Dean-BAM.jpg'
+  utter_Dean_FOBE:
+  - text: |
+      Dr. Mark Olweny Research Associate Professor
+      - Email: molweny@umu.ac.ug
+    image: assets/Mark Fobe.jpg
+  utter_Dean_Agriculture:
+  - text: ' Dr. Simon Peter Musinguzi'
+    image: assets/Dr.-Simon-Peter-Musinguzi-Dean-Faculty-of-Agriculture.jpg
+  utter_Software:
+  - text: ' The enrollment key for software engineering is 2024'
+  utter_Ethics:
+  - text: ' The enrollment key for science, technology and ethics is Technology '
+  utter_Graphics:
+  - text: ' The enrollment key for Graphics and Animation is 3D'
+  # utter_ask_lname:
+  # - text: ' What is your name?'
+  # utter_ask_lemail:
+  # - text: Provide me with the university email
+  # utter_askname:
+  # - text: 'May i know your name please'
+  # utter_askemail:
+  # - text: ' May i know your email please'
+  # utter_submit:
+  # - text: Thank you
+  utter_kasozi:
+  - text: |
+      - Mr.Kasozi Brain
+      You can reach him out on:
+      - 0757355841/0774350156
+      - Email: bkasozi@umu.ac.ug
+  utter_otala:
+  - text: |
+      - Mrs. Otala Laura
+      You can reach her out on:
+      - 0757355841/0774350156
+      - Email: lotaala@umu.ac.ug
+  utter_key:
+  - text: |
+      - Please provide me with your details:
+      - Registration number
+        Course name
+        Course unit
+        Year of study
+        semester
+  utter_Show_enrollment:
+  - text: |
+      - Step 1:
+      - Locate the search bar in the right hand corner of the E-learning platform.
+      - Step 2:
+      - Enter the name of the course unit you want to enroll into and hit enter to start the search.
+      - Step 3:
+      - Hover keenly over a list of course units displayed in the search results to identify the one you want specifically.
+      - Step 4:
+      - Once you have identified the course unit you want, select it and continue.
+      - Step 5:
+      - A window will be displayed asking for the enrollment key. Enter the enrollment key and click enroll.
+      If the enrollment requires no enrollment key, just click enroll.
+      - You have successfully been enrolled.
+    attachment: { "type":"video",  "payload":{ "title":" Watch tutorial below of how  to enroll","src":"assets/Enrollment.mp4" } }
+
+  
+  utter_search:
+  - text: 'Please watch the following video to learn how to search and access the course units you want'
+    attachment: { "type":"video",  "payload":{ "title":" Watch tutorial","src":"assets/How to search for a course unit.mp4" } }
+
+  
+
+  utter_history:
+  - text: |
+      Our history:
+      - Uganda Martyrs University (UMU) is a faith-based private University owned by the Episcopal Conference of the Catholic Bishops of Uganda. UMU acknowledges the late Archbishop Kiwanuka as the Father of Catholic higher education in Uganda. It (UMU) is located at Nkozi hill, 82 km west of Kampala, the Capital of Uganda, on the Kampala-Masaka highway. The concept of a Catholic University in Uganda dates back as far as the nineteen forties, when the late Archbishop Joseph Kiwanuka conceived the idea. Unfortunately, various circumstances impeded the foundation of a university at that time. This proposal was renewed during the nineteen eighties, and was endorsed by the Uganda Episcopal Conference in 1989. Consequently, the University was officially launched on 24th March 1991 by His Excellency Yoweri Kaguta Museveni, the President of Uganda. Uganda Martyrs University was granted a provisional license on 17th August 1993, and the first academic year opened on Monday 18th October 1993, the anniversary of the canonization of the Uganda Martyrs. It started with 84 students (28 female and 56 male) from all parts of Uganda admitted in two academic Units, namely the Institute of Ethics and Development Studies and the Faculty of Business Administration and Management. This enrolment has increased unabated over the years. Currently UMU has ten academic units and a Campus or two in the four Catholic Ecclesiastical Provinces, with a number of Affiliate Institutions. On 18th October 1993, the University was officially opened in the presence of His Excellency, the President of Uganda, Yoweri K. Museveni, the Uganda Catholic Bishops, the Minister of Education and Sports, and a host of friends and well-wishers. Uganda Martyrs University is fully recognised by the Ministry of Education and Sports in Uganda and the awards conferred are autonomous. The University was granted a Charter confirmed with a Certificate issued by National Council for Higher Education was on 3rd December, 2004 and signed by the President of Republic of Uganda on 2nd April 2005. Uganda Martyrs University opened in October 1993 with 84 students and two academic departments. Currently, UMU has 7 Faculties, 1 Institute, 3 Schools, 3 Directorates; and about 5,000 students, of whom about 1,500 are full-time residents on campus. The remaining 2,500 and 1,000 participate in distance learning and part-time programmes respectively at the University campuses in Kabale, Kampala, Masaka, Mbale and Lira.
+    attachment: { "type":"video",  "payload":{ "title":" Watch a brief about the history of the university","src":" https://youtu.be/ZbahOyQ0GkU" } }
+
+  utter_dean_of_students:
+  - text: |
+      Mr. David Busobozi
+      Dean of Students
+    image: assets/Dean.jpeg
+
+  utter_head:
+  - text: |
+      
+      His Lordship Rt. Rev. Dr. Joseph Antony Zziwa
+      Chairman of the Uganda Episcopal Conference
+      Bishop of Kiyinda-Mityana Catholic Diocese PhD in Church History (Louvain Belgium)
+    image: assets/umucc.jpeg
+
+  utter_ViceC: 
+  - text: |
+      Prof. Patrick Edrin Kyamanywa
+      Vice Chancellor
+    image: assets/VC.jpeg
+
+  utter_DeputyVC:
+  - text: |
+      Rev. Dr. Christopher Mukidi
+      Deputy Vice Chancellor    
+    image: assets/DVC.jpeg
+
+  utter_CFO:
+  - text: |
+      Mr. Silvanus Ahaisibwe
+      Chief Finance Officer
+  
+  utter_HumanResource:
+  - text: |
+      Mr. Mpoza Isaac Kagimu
+      Director Human Resources
+    image: assets/umuHR.jpeg
+
+  utter_Academic_registrar:
+  - text: |
+      Rev. Dr. Joseph Buchana Kisoga
+      Academic Registrar
+
+  utter_missing_units: 
+    - text: 'Please watch the video below  to bring your missing enrolled course units back on the dashboard'
+      attachment: { "type":"video",  "payload":{ "title":" Watch tutorial","src":"assets/Missing course units.mp4" } }
+
+  utter_updates:
+    - text: |
+        Please check out on your student portal
+        - [Click here](https://student.umu.ac.ug/portal-2.5/?cache)
+      custom:
+        payload: Carousel
+        data:
+          elements:
+            - title: "Card 1"
+              subtitle: "Subtitle 1"
+              image_url: "http://example.com/image1.jpg"
+          
+            - title: "Card 2"
+              subtitle: "Subtitle 2"
+              image_url: "http://example.com/image2.jpg"
+        
+
+# entities:
+# - name
+# - email 
+        
+
+# slots:
+#   name:
+#     type: text
+#     mappings:
+#     - type: from_text
+#   email:
+#     type: text
+#     mappings:
+#     - type: from_text
+    
+actions:
+- utter_help
+- utter_Dean_science
+- utter_greet
+# - action_generate_response
+# - utter_askname
+# - utter_askemail
+- action_respond_to_greet
+- action_respond_to_goodbye
+- action_respond_to_affirm
+- action_respond_to_deny
+- action_respond_to_mood_great
+- action_respond_to_mood_unhappy
+- action_respond_to_bot_challenge
+- action_AddMessage
+- action_AppendEvents
+# - action_save_data
+- action_answer_question
+- action_generate_response
+# - utter_slots_values
+- utter_history
+- utter_ViceC
+- utter_DeputyVC
+- utter_CFO
+- utter_HumanResource
+- utter_head
+- utter_Academic_registrar
+- utter_dean_of_students
+# - action_resources_list
+- action_show_carousel
+# - action_start_session
+# - action_email
+- utter_reply 
+- utter_search
+- utter_missing_units 
+- utter_hi
+
+# forms:
+#   student:
+#     required_slots:
+#     - name
+#     - email
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

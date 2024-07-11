@@ -1,0 +1,510 @@
+<html>
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasa Webchat Integration</title>
+    <style>
+        /* Basic styling for the chat container */
+        #webchat {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            z-index: 1000;
+        }
+    </style>
+</head> -->
+<!-- <head>
+    <style>
+        .rw-avatar img {
+            width: 100px;
+            /* Adjust the width as needed */
+            height: 60px;
+            /* Adjust the height as needed */
+            border-radius: 50%;
+            /* Optional: make the image circular */
+        }
+    </style>
+
+</head> -->
+<body>
+<!-- <div id="webchat">
+<script src="https://storage.googleapis.com/push-webchat/wwc-latest.js"></script>
+// Or you can replace latest with a specific version
+<script>
+    WebChat.default.init({
+        selector: "#webchat",
+        initPayload: "/greet",
+        channelUuid: '05221ba1-e9c5-4ead-82fe-9e1086e54258', // External Channel UUID from Weni
+        host: 'http://localhost:5005', // Host URL from Weni
+        socketUrl: "https://websocket.weni.ai",
+        title: "UGANDA MARTYRS UNIVERSITY",
+        subtitle: "Welcome to the E-learning platform",
+    })
+</script> -->
+
+    <!-- <script>!(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://storage.googleapis.com/push-webchat/wwc-latest.js"),
+                // Replace 1.x.x with the version that you want
+                (e.async = !0),
+                (e.onload = () => {
+                    window.WebChat.default(
+                        {
+                            initPayload: "/greet",
+                            customData: { language: "en" },
+                            socketUrl: "http://localhost:5005/webhooks/rest/webhook",
+                            // add other props here
+                        },
+                        null
+                    );
+                }),
+                t.insertBefore(e, t.firstChild);
+        })();
+    </script> -->
+<!-- <div id="rasa-chat-widget" data-websocket-url="http://localhost:5005" data-init-payload="/greet"></div>
+
+<script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script> -->
+
+
+    <!-- <script>!(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+                // Replace 1.x.x with the version that you want
+                (e.async = !0),
+                (e.onload = () => {
+                    window.WebChat.default(
+                        {
+                            initPayload: "/greet",
+                            customData: { language: "en" },
+                            socketUrl: "http://localhost:5005/webhooks/rest/webhook",
+                            // add other props here
+                        },
+                        null
+                    );
+                }),
+                t.insertBefore(e, t.firstChild);
+        })();
+    </script> -->
+
+
+<!-- <script>
+    !(function () {
+        let e = document.createElement("script"),
+            t = document.head || document.getElementsByTagName("head")[0];
+        (e.src = "./dist/index.js"),
+            (e.async = !0),
+            (e.onload = () => {
+                window.ChatbotWidget.default({
+                    rasaServerUrl: "http://localhost:5005/webhooks/rest/webhook",
+                    userId: "jitesh97",
+                    initialPayload: "/greet",
+                    metadata: {},
+                    botAvatar:
+                        "",
+                    widgetColor: "#a78bfa",
+                    textColor: "#4c1d95",
+                    userMsgBackgroundColor: "#e1d7ff",
+                    botTitle: "Retail Bot",
+                    botSubTitle: "Sales & Services Assistant",
+                    botMsgBackgroundColor: "#f3f4f6",
+                    botResponseDelay: "",
+                    chatHeaderCss: {
+                        textColor: "#4c1d95",
+                        backgroundColor: "#a78bfa",
+                        enableBotAvatarBorder: true,
+                    },
+                    chatHeaderTextColor: "#4c1d95",
+                    botMsgColor: "#4b5563",
+                    userMsgColor: "#4c1d95",
+                    embedded: false,
+                    buttonsCss: {
+                        color: "#4c1d95",
+                        backgroundColor: "#e1d7ff",
+                        borderColor: "#4b5563",
+                        borderWidth: "0px",
+                        borderRadius: "999px",
+                        hoverBackgroundColor: "white",
+                        hoverColor: "#4b5563",
+                        hoverborderWidth: "1px",
+                        enableHover: false,
+                    },
+                });
+            }),
+            t.insertBefore(e, t.firstChild);
+    })();
+</script> -->
+
+<!-- <script>
+    !(function () {
+        let e = document.createElement("script"),
+            t = document.head || document.getElementsByTagName("head")[0];
+        (e.src = "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+            (e.async = !0),
+            (e.onload = () => {
+                window.WebChat.default(
+                    {
+                        initPayload: "/greet",
+                        socketUrl: "http://localhost:5005",
+                        // add other props here
+                    },
+                    null
+                );
+            }),
+            t.insertBefore(e, t.firstChild);
+    })();
+</script> -->
+
+<!-- 
+    <script>!(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+                // Replace 1.x.x with the version that you want
+                (e.async = !0),
+                (e.onload = () => {
+                    window.WebChat.default(
+                        {
+                            initPayload: "/greet",
+                            customData: { language: "en" },
+                            socketUrl: "http://localhost:5005",
+                            // add other props here
+                        },
+                        null
+                    );
+                }),
+                t.insertBefore(e, t.firstChild);
+        })();
+        localStorage.clear();
+    </script> -->
+    <!-- <div id="webchat"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@botfront/rasa-webchat@1.0.1/lib/index.js"></script>
+    <script>
+        WebChat.default.init({
+            selector: "#webchat",
+            initPayload: "/greet", // initial message or command
+            customData: { "language": "en" }, // arbitrary custom data
+            socketUrl: "http://localhost:5005", // your Rasa server URL
+            socketPath: "/socket.io/", // your Rasa socket path
+            title: "My Chatbot",
+            subtitle: "How can I help you?",
+            params: {
+                storage: "session" // options are "local" or "session"
+            }
+        });
+    </script> -->
+
+
+        <!-- <div id="webchat"></div>
+        <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"></script>
+        <script>
+            window.WebChat.default.init({
+                selector: "#webchat",
+                initPayload: "/greet", // initial message or command
+                customData: { "language": "en" }, // arbitrary custom data
+                socketUrl: "http://localhost:5005", // your Rasa server URL
+                socketPath: "/socket.io/", // your Rasa socket path
+                title: "My Chatbot",
+                subtitle: "How can I help you?",
+                params: {
+                    storage: "session" // options are "local" or "session"
+                }
+            });
+        </script> -->
+
+
+    
+<!-- <script>!(function () {
+        let e = document.createElement("script"),
+            t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+            "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+            // Replace 1.x.x with the version that you want
+            (e.async = !0),
+            (e.onload = () => {
+                window.WebChat.default(
+                    {
+                        customData: { language: "en" },
+                        visualViewporinitPayload: "/greet",
+                        socketUrl: "http://localhost:5005",
+                        // add other props here
+                    },
+                    null
+                );
+            }),
+            t.insertBefore(e, t.firstChild);
+    })();
+</script> -->
+<!-- <div class="tap-target" data-target="profile_div">
+    <div class="tap-target-content">
+        <h5 class="white-text">Hey there!</h5>
+        <p class="white-text">I am Sara, your Rasa assistant?</p>
+    </div>
+</div> -->
+<!-- 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rasa Assistant</title>
+<link rel="stylesheet" href="index.css">
+
+</head>
+<div class="container">
+
+    <div class="circle">
+        <div class="C">
+            <div class="content">
+                <h1>Hey there!</h1>
+                <p>I am UMU-BOT, your Virtual Assistant</p>
+                <div class="avatar">
+                    <button>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKX3FKM0fZ5ykAloXvsb4R9BzeDBQH5_Gu8w&s"
+                            alt="Avatar">
+                    </button> 
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uganda Martyrs University Chatbot</title>
+    <link rel="stylesheet" href=""> <!-- Optional: Your custom CSS -->
+</head>
+
+
+<body style="background-image: url('assets/Moodle new.png');">
+    <!-- <div class="widget">
+        <div class="chat_header">
+            <h2>Chat with Us</h2>
+        </div>
+        <div class="chats">
+        
+            <div class="botMsg">Hello! How can I assist you today?</div>
+            <div class="userMsg">I need help with my course material.</div>
+        </div>
+        <div class="keypad">
+            <input type="text" placeholder="Type a message..." />
+            <button>Send</button>
+        </div>
+        <div class="suggestions">
+            <button>Option 1</button>
+            <button>Option 2</button>
+        </div>
+        <div class="cards">
+            <div class="card">Card Content</div>
+        </div>
+        <div class="quickReplies">
+            <button>Quick Reply 1</button>
+            <button>Quick Reply 2</button>
+        </div>
+        <div class="collapsible">
+            <div class="collapsible-header">Click to Expand</div>
+            <div class="collapsible-body">Collapsible Content</div>
+        </div>
+        <div class="video-container">
+            <video src="path/to/video.mp4" controls></video>
+        </div>
+        <div class="imgcard">
+            <img src="path/to/image.jpg" alt="Image Description">
+        </div>
+        <div class="dropDownMsg">
+            <select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+            </select>
+        </div>
+        <div class="pdf_attachment">
+            <a href="path/to/document.pdf" download>Download PDF</a>
+        </div>
+        <div class="tap-target">
+            <p>Welcome to our chatbot! Click here to start.</p>
+        </div>
+    </div> -->
+    <head>
+        <style> 
+            /*
+            .rasa-webchat-launcher {
+            background-image: url('assets/lighting head.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%;
+            border: none;
+        } */
+        .rw-conversation-container .rw-messages-container.rw-imageFrame{background-image: url("assets/blue head.jpg");}
+        .rw-conversation-container .rw-messages-container.rw-send
+        .rw-widget-container{ height: 100%; width: 100%;}
+        .rw-widget-container .rw-header /*{background-image: url('assets/chapel.jpeg') ; background-size: cover; }*/
+        .rw-widget-container .rw-title
+        .rw-widget-container.rw-conversation-container
+        .rw-conversation-contianer {height: 80px;} .rw-header
+        .rw-conversation-contianer .rw-header .rw-title 
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: red;} 
+        .rw-conversation-container .rw-messages-container .rw-message .rw-response
+        .rw-launcher
+        </style>
+    </head>
+<script>
+    !(function () {
+        let e = document.createElement("script"),
+            t = document.head || document.getElementsByTagName("head")[0];
+        e.src = "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js";
+        e.async = !0;
+        e.onload = () => {
+            window.WebChat.default(
+                {
+                    customData: { language: "en" }, // Example custom data
+                    initPayload: "/greet", // Ensure you have a greet intent configured in Rasa
+                    socketUrl: "http://localhost:5005",
+                    profileAvatar: "/assets/umu.jpg",
+                    botAvatar: '/assets/robot.jpg',
+                    openLauncherImage: "assets/icons/bot-removebg-preview (2).png",
+                   // openLauncherImage: "assets/Motion.gif",
+                    title: " Martyrs  Ai  Assistant ", // Title of the webchat window
+                    subtitle: "Welcome to the E-learning Chatbot", // Subtitle of the webchat window
+                    inputTextFieldHint: "Type a message...", // Placeholder for input field
+                    showFullScreenButton: true, // Show full screen button
+                    showMessageDate: true, // Show date of messages
+                    params: { // Additional optional parameters
+                    storage: "local", // Can be "session" or "local" 
+                    autoClearCache: true,
+                    fullScreenMode: false,
+                    embedded: true,
+                    docViewer: true,
+                    connectOn: 'mount',
+                    onSocketEvent: {},
+                    protocol: 'socketio',
+                    protocolOptions: {},
+                    badge: 0,
+                    displayUnreadCount: true,
+                    //tooltipPayload: '/greet',
+                    //tooltipDelay: 50,
+                    withRules: true,
+                    rules: null,
+                    triggerEventListenerUpdateRate: 500,
+                    connectingText: 'Waiting for server...',
+                    startFullScreen: true,
+                    showHeaderAvatar: true,
+                    headerImage: 'assets/admissions.jpeg',
+                    displayUnreadCount: true,
+                    storage: localStorage.clear(),
+                    addCarousel: true,
+                    isChatVisible: true,
+                    isChatOpen: true,
+                    toggleChat: true,
+                    tooltipSent: true,
+                    disableTooltips:false,
+                    showCloseButton: true,
+                    showFullScreenButton: true,
+                    disabledInput: false,
+                    showCloseButton: true,
+
+                    
+                    
+                    customMessageDelay: (message) => {
+                            let delay = message.length * 30;
+                            if (delay > 3 * 1000) delay = 3 * 1000;
+                            if (delay < 800) delay = 800;
+                            return delay;
+                        },
+
+
+                    },
+                    customMessageHandler: function (customMessage) {
+                        if (customMessage.payload === 'cardsCarousel') {
+                            const carouselContainer = document.createElement('div');
+                            carouselContainer.className = 'carousel';
+
+                            customMessage.data.forEach(cardData => {
+                                const card = document.createElement('div');
+                                card.className = 'card';
+
+                                const img = document.createElement('img');
+                                img.src = cardData.image;
+
+                                const content = document.createElement('div');
+                                content.className = 'content';
+
+                                const title = document.createElement('h3');
+                                title.innerText = cardData.title;
+
+                                const ratings = document.createElement('p');
+                                ratings.innerText = `Ratings: ${cardData.ratings}`;
+
+                                content.appendChild(title);
+                                content.appendChild(ratings);
+
+                                card.appendChild(img);
+                                card.appendChild(content);
+
+                                carouselContainer.appendChild(card);
+                            });
+
+                            document.querySelector('#rasa-webchat-container').appendChild(carouselContainer);
+                        }
+                    }
+                },
+                null
+            );
+        },
+            t.insertBefore(e, t.firstChild);
+    })();
+</script>
+
+</body>
+</html> 
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Head</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .avatar-canvas {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chatbot"></div>
+    <canvas id="avatar-canvas" class="avatar-canvas"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@rasa-webchat/core@0.12.1/dist/webchat.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@rasa-webchat/webchat@1.0.0/dist/webchat.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html> -->

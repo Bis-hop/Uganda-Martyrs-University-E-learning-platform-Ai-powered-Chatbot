@@ -1,0 +1,42 @@
+[
+  {
+    "text": "Bachelor of Laws\t4 Years\tFulltime",
+    "intent": "Law_courses",
+    "intent_prediction": {
+      "name": "BAM_programmes",
+      "confidence": 0.2971514165401459
+    }
+  },
+  {
+    "text": "show me how to the e-learning platform",
+    "intent": "Moodle_login",
+    "intent_prediction": {
+      "name": "Moodle_Register",
+      "confidence": 0.7249701619148254
+    }
+  },
+  {
+    "text": "what do i need to log into the  e-learning platform",
+    "intent": "Moodle_Register",
+    "intent_prediction": {
+      "name": "Moodle_login",
+      "confidence": 0.8558194041252136
+    }
+  },
+  {
+    "text": "How do  they log in the  e-learning platform",
+    "intent": "Moodle_Register",
+    "intent_prediction": {
+      "name": "Moodle_login",
+      "confidence": 0.5486541986465454
+    }
+  },
+  {
+    "text": "how do i enroll myself on moodle",
+    "intent": "data",
+    "intent_prediction": {
+      "name": "Show_enrollment",
+      "confidence": 0.7297272682189941
+    }
+  }
+]

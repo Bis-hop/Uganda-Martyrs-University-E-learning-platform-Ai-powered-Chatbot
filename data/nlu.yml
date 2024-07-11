@@ -1,0 +1,891 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - that’s right
+    - go ahead
+    - ok
+    - okay
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: Appreciate
+  examples: |
+    - Thank you
+    - Thanx
+    - Thank u
+    - I appreciate
+    - You are the best
+    - Its my pleasure
+    - Thx alot
+    - Thanks so much
+    - Kale
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - Who are you?
+    - Who created you?
+    - Tell me about you
+    - Can i know you?
+    - Who iam i interacting with!
+    - Talk about yourself 
+    - Make me know you
+- intent: about_university
+  examples: |
+    - Where is Uganda Martyrs University located
+    - What courses are offered at Uganda Martyrs University
+    - When was Uganda Martyrs University founded
+    - Who are the founders Uganda Martyrs University
+    - What is the university mission
+- intent: about_moodle
+  examples: |
+    - Give me the course unit for the faculty of Business Administration
+    - Give me the course unit for the faculty of Education
+    - Give me the course unit for the faculty of Law
+    - Give me the course unit for the faculty of Science
+    - Give me the course unit for the faculty of Agriculture
+    - Give me the course unit for the faculty of Beauty environment
+    - Show me the course units for this semester
+- intent: Faculties
+  examples: |
+    - Faculty of Education
+    - Faculty of  science
+    - Faculty of  law
+    - Faculty of  Agriculture
+    - Faculty of the built  environment
+    - Faculty of Health Sciences
+    - Faculty of Engineering and Applied Sciences
+    - Faculty of Business Administration and Management
+- intent: Education_programmes
+  examples:
+  - text: |
+      Bachelor of Arts English Language and Literature in English	3 Years	Fulltime
+  - text: |
+      Bachelor of Arts with Education	3 Years	Fulltime
+  - text: |
+      Bachelor of Arts with Education	3 Years	Weekend/Holiday
+  - text: |
+      Bachelor of Education (Primary)	3 Years	Distance Learning
+  - text: |
+      Bachelor of Education Early Childhood Development	2 Years	Distance Learning
+  - text: |
+      Bachelor of Education Early Childhood Development	3 Years	Distance Learning
+  - text: |
+      Bachelor of Education English Language and Literature	3 Years	Distance Learning
+  - text: |
+      Bachelor of Inclusive Deaf Education (Arts and Sciences)	3 Years	Fulltime
+  - text: |
+      Bachelor of Science with Education	3 Years	Fulltime
+  - text: |
+      Bachelor of Science with Education Agriculture	3 Years	Fulltime
+  - text: |
+      Bachelor of Science with Education  Agriculture	3 Years	Fulltime
+  - text: |
+      Diploma in Early Childhood Development Education	2 Years	Distance Learning
+  - text: |
+      Diploma in Early Childhood Development Education	2 Years	Weekend/Holiday
+  - text: |
+      Diploma in Education (Primary)	2 Years	Distance Learning
+  - text: |
+      Higher Education Certificate (Arts/Sciences) (New)	1 Year	PT
+  - text: |
+      Higher Education Certificate (Arts/Sciences) (New)	1 Year	Fulltime
+  - text: |
+      Master of Arts in Education and Development	2 Years	Fulltime
+  - text: |
+      Master of Education	2 Years	PT
+  - text: |
+      Master of Education	2 Years	Weekend/Holiday
+  - text: |
+      Master of Education	2 Years	Fulltime
+  - text: |
+      Postgraduate Diploma in Education	1 Year	PT
+  - text: |
+      Postgraduate Diploma in Education	1 Year	Fulltime/Distance Learning
+  - text: |
+      Postgraduate Diploma in Inclusive Education	2 Years	Fulltime/Distance Learning
+  - text: |
+      Postgraduate Diploma in Teaching and Learning in Higher Education	2 Years	Distance Learning
+  - text: |
+      what courses are available under  Education
+  - text: |
+      what courses are available under  Educ
+  - text: |
+      what courses are available under  Education faculty
+  - text: |
+      what courses are available under  Educ faculty
+  - text: |
+      what courses are available under  the  Education faculty
+  - text: |
+      list courses done in  Education
+  - text: |
+      list courses done under Education
+  - text: |
+      what courses can i do in  Education
+  - text: |
+      what courses can i do in faculty of Education
+- intent: Science_programmes
+  examples:
+  - text: |
+      Bachelor of Science (Mathematics, Chemistry, Physics, Statistics,)	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Computer Science	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Economics and Statistics	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Financial Mathematics	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Information Technology	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Information Technology	3 Years	PT
+  - text: |
+      Certificate in Information Technology	2 Years	Fulltime
+  - text: |
+      Certificate in Library and Information Science	2 Years	Fulltime
+  - text: |
+      Certificate in Science Laboratory Technology	2 Years	Fulltime
+  - text: |
+      Diploma in Computer Science and Information Technology	2 Years	PT
+  - text: |
+      Diploma in Computer Science and Information Technology	2 Years	Fulltime
+  - text: |
+      Diploma in Science Laboratory Technology	2 Years	Fulltime or Weekend
+  - text: |
+      Master of Science in ICT Management, Policy and Architectural Design	2 Years	PT
+  - text: |
+      Master of Science in Information Systems	2 Years	PT
+  - text: |
+      what courses are available under  Science
+  - text: |
+      what courses are available under Science faculty
+  - text: |
+      what courses are available under  the Science faculty
+  - text: |
+      list courses done in Science
+  - text: |
+      list courses done under Science
+  - text: |
+      what courses can i do in Science
+  - text: |
+      what courses can i do in faculty of Science
+- intent: Law_courses
+  examples:
+  - text: |
+      Bachelor of Laws	4 Years	Fulltime
+  - text: |
+      Bachelors
+- intent: BuiltEnvironment_programmes
+  examples:
+  - text: |
+      Advanced Diploma in Environmental Design	2 Years	Fulltime
+  - text: |
+      Bachelor of Environmental Design (Pre-requisite for Architecture/ Landscape Architecture/Urban Planning)	3 Years	Fulltime
+  - text: |
+      Master of Architecture (Professional)	2 Years	Fulltime
+  - text: |
+      what courses are available under fobe
+  - text: |
+      what courses are available under fobe faculty
+  - text: |
+      what courses are available under  the fobe faculty
+  - text: |
+      list courses done in fobe
+  - text: |
+      list courses done under fobe
+  - text: |
+      what courses can i do in fobe
+  - text: |
+      what courses can i do in faculty of built environment
+- intent: BAM_programmes
+  examples:
+  - text: |
+      Bachelor of Arts in Microfinance and Community Development	3 Years	PT
+  - text: |
+      Bachelor of Arts in Microfinance and Community Development	3 Years	Fulltime
+  - text: |
+      Bachelor of Business Administration and Management	3 Years	Fulltime
+  - text: |
+      Bachelor of Business Administration and Management	3 Years	PT
+  - text: |
+      Bachelor of International Business Management	3 Years	Fulltime
+  - text: |
+      Bachelor of International Business Management	4 Years	Distance Learning
+  - text: |
+      Bachelor of International Business Management	3 Years	PT
+  - text: |
+      Bachelor of Procurement and Supply Chain Management	3 Years	PT
+  - text: |
+      Bachelor of Procurement and Supply Chain Management	3 Years	Fulltime
+  - text: |
+      Bachelor of Real Estate Management	3 Years	PT
+  - text: |
+      Bachelor of Real Estate Management	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Accounting and Finance	3 Years	PT
+  - text: |
+      Bachelor of Science in Accounting and Finance	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Business Economics	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Development Economics	3 Years	PT
+  - text: |
+      Bachelor of Science in Development Economics	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Economics and Natural Resources Management	3 Years	Fulltime
+  - text: |
+      Bachelor of Transport and Logistics Management	3 Years	Fulltime
+  - text: |
+      Bachelor of Transport and Logistics Management	3 Years	PT
+  - text: |
+      Certificate in Business Administration and Management	2 Years	Fulltime
+  - text: |
+      Certificate in Records and Information Management	2 Years	Fulltime
+  - text: |
+      Diploma in Accounting and Finance	2 Years	PT
+  - text: |
+      Diploma in Business Administration and Management	2 Years	Fulltime
+  - text: |
+      Diploma in Business Administration and Management	2 Years	PT
+  - text: |
+      Diploma in Microfinance	2 Years	Distance Learning
+  - text: |
+      Diploma in Procurement and Stores Management	2 Years	PT
+  - text: |
+      Diploma in Records and Information Management	2 Years	Fulltime
+  - text: |
+      E4Impact MBA in Impact Entrepreneurship	2 Years	PT
+  - text: |
+      Master of Arts in Microfinance Management	2 Years	PT
+  - text: |
+      Master of Arts in Microfinance Management	2 Years	Fulltime/Distance Learning
+  - text: |
+      Master of Business Administration	2 Years	PT
+  - text: |
+      Master of Business Administration Management	2 Years	Fulltime
+  - text: |
+      Master of Science in Development Economics	2 Years	PT
+  - text: |
+      Master of Science in Development Economics	2 Years	Fulltime
+  - text: |
+      what courses are available under BAM
+  - text: |
+      what courses are available under BAM faculty
+  - text: |
+      what courses are available under  the BAM faculty
+  - text: |
+      list courses done in BAM
+  - text: |
+      list courses done under BAM
+  - text: |
+      what courses can i do in BAM
+  - text: |
+      what courses can i do in faculty of business Administration
+- intent: Health_sciences_programmes
+  examples:
+  - text: |
+      Advanced Diploma in Clinical Mentoring	2 Years	PT
+  - text: |
+      Advanced Diploma in Health Promotion and Education	2 Years	PT
+  - text: |
+      Advanced Diploma in Health Services Management	2 Years	Fulltime
+  - text: |
+      Bachelor of Arts in Counselling Psychology	3 Years	PT
+  - text: |
+      Bachelor of Midwifery Sciences	3 Years	Fulltime
+  - text: |
+      Bachelor of Public Health and Health Promotion	3 Years	Fulltime
+  - text: |
+      Certificate in Child and Adolescent Counselling	2 Years	PT
+  - text: |
+      Certificate in Health Promotion and Education	2 Years	Fulltime
+  - text: |
+      Certificate in HIV/AIDS Counselling	2 Years	Fulltime
+  - text: |
+      CERTIFICATE IN HIV/AIDS counselling 2 Years	Fulltime
+  - text: |
+      Certificate in Medical Records and Informatics Management	2 Years	Fulltime
+  - text: |
+      Certificate in Public Health and Health Promotion	2 Years	PT
+  - text: |
+      Diploma in Counselling Psychology	2 Years	PT
+  - text: |
+      Diploma in Health Promotion and Education	2 Years	PT
+  - text: |
+      Diploma in Health Services Management	2 Years	PT
+  - text: |
+      Master of Arts in Counselling Psychology	2 Years	Fulltime
+  - text: |
+      Master of Medicine in Internal Medicine	3 Years	PT
+  - text: |
+      Master of Public Health in Health Promotion	2 Years	Fulltime
+  - text: |
+      Master of Public Health in Health Promotion	2 Years	PT
+  - text: |
+      Master of Public Health in Population and Reproductive Health	2 Years	PT
+  - text: |
+      Master of Public Health in Population and Reproductive Health	2 Years	Fulltime
+  - text: |
+      Master of Science in Health Services Management	2 Years	PT
+  - text: |
+      Master of Science in Health Services Management	2 Years	Fulltime
+  - text: |
+      Ordinary Diploma in Clinical Mentoring	2 Years	PT
+  - text: |
+      what courses are available under Health sciences
+  - text: |
+      what courses are available under Health sciences faculty
+  - text: |
+      what courses are available under  the Health sciences faculty
+  - text: |
+      list courses done in Health sciences
+  - text: |
+      list courses done under Health sciences
+  - text: |
+      what courses can i do in Health sciences
+  - text: |
+      what courses can i do in faculty of Health sciences
+- intent: Engineering_programmes
+  examples:
+  - text: |
+      Certificate in Automobile Mechanics	2 Years	Fulltime
+  - text: |
+      Certificate in Building and Construction	2 Years	Fulltime
+  - text: |
+      Certificate in Electrical Installation and Systems Maintenance	2 Years	Fulltime
+  - text: |
+      Certificate in Fashion and Garment Design	2 Years	Fulltime
+  - text: |
+      Certificate in Fitting and Machining	2 Years	Fulltime
+  - text: |
+      Certificate in Plumbing	2 Years	Fulltime
+  - text: |
+      Certificate in Welding and Metal Fabrication	2 Years	Fulltime
+  - text: |
+      Certificate in Wood Technology	2 Years	Fulltime
+  - text: |
+      Diploma in Civil Engineering	2 Years	Fulltime
+  - text: |
+      Diploma in Electrical Engineering	2 Years	Fulltime
+  - text: |
+      Diploma in Mechanical Engineering	2 Years	Fulltime
+  - text: |
+      Diploma in Water Engineering	2 Years	Fulltime
+  - text: |
+      what courses are available under Engineering
+  - text: |
+      what courses are available under Engineering faculty
+  - text: |
+      what courses are available under  the Engineering faculty
+  - text: |
+      list courses done in Engineering
+  - text: |
+      list courses done under Engineering
+  - text: |
+      what courses can i do in Engineering
+  - text: |
+      what courses can i do in faculty of Engineering
+- intent: Agriculture_programmes
+  examples:
+  - text: |
+      Bachelor of Agricultural Economics and Agribusiness Management	3 Years	Fulltime
+  - text: |
+      Bachelor of Agriculture	3 Years	Fulltime
+  - text: |
+      Bachelor of Science in Agricultural Technology	4 Years	PT
+  - text: |
+      Bachelor of Science in Agriculture	4 Years	Fulltime
+  - text: |
+      Certificate in Agriculture	2 Years	PT
+  - text: |
+      Diploma in Agricultural Economics and Agribusiness Management	2 Years	Fulltime
+  - text: |
+      Diploma in Animal Production and Farm Management	2 Years	PT
+  - text: |
+      Diploma in Animal Production and Farm Management	2 Years	Fulltime
+  - text: |
+      Diploma in Crop Production and Farm Management	2 Years	PT
+  - text: |
+      Diploma in Crop Production and Farm Management	2 Years	Fulltime
+  - text: |
+      Master of Science in Monitoring and Evaluation	2 Years	Fulltime
+  - text: |
+      what courses are available under Agriculture
+  - text: |
+      what courses are available under Agric
+  - text: |
+      what courses are available under Agriculture faculty
+  - text: |
+      what courses are available under Agric faculty
+  - text: |
+      what courses are available under  the Agriculture faculty
+  - text: |
+      list courses done in Agriculture
+  - text: |
+      list courses done under Agriculture
+  - text: |
+      what courses can i do in Agriculture
+  - text: |
+      what courses can i do in faculty of Agriculture
+- intent: Moodle_login
+  examples: |
+    - How do I log into moodle
+    - Do i need to log into moodle
+    - what do i need to log into moodle
+    - How do  they log in moodle
+    - show me how to login
+    - Help me login
+    - How do I log into  the e-learning platform
+    - Do i need to log into the e-learning platform
+    - what do i need to log into the e-learning platform
+    - How do  they log into the e-learning platform
+    - show me how to the e-learning platform
+    - Help me login into the e-learning platform
+- intent: Moodle_Register
+  examples: |
+    - How do I register into moodle
+    - How do I register to moodle
+    - Do i need to register to use moodle
+    - what do i need to register to moodle
+    - How do  they register in moodle
+    - show me how to register into moodle
+    - Help me register into moodle
+    - How do I register into e-learning platform
+    - How do I register to  e-learning platform
+    - Do i need to register to use  e-learning platform
+    - what do i need to log into the  e-learning platform
+    - How do  they log in the  e-learning platform
+    - Help me register into the  e-learning platform
+- intent: Requirements_to_join_moodle
+  examples: |
+    - What do i need to use moodle
+    - what do i need to join moodle
+    - How can i join  moodle
+    - show me how to join moodle
+    - What do i need to use the  e-learning platform
+    - what do i need to join the  e-learning platform
+    - How can i join  the  e-learning platform
+    - show me how to join the  e-learning platform
+- intent: New_here
+  examples: |
+    - Iam new here
+    - what can i do it is my first time here
+    - I don't know what to do
+    - Help me understand this platform
+    - Where do i start from
+    - Guide me
+    - Please  guide me
+    - Am new here
+    - Tell me what to do
+- intent: results
+  examples: |
+    - What to get results 
+    - What do if i want my results
+    -  i need results 
+    - How can i have access to results 
+    - need help  with results
+    - Tell me more about results
+- intent: Enrollment_key
+  examples: |
+    - Give me the key
+    - Some enrollment key
+    - Provide me with the enrollment key to a course unit
+    - Do you have the  enrollment key  to my course units
+    - I want the enrollment key
+    - Help  with enrollment key
+    - Help  with the enrollment key
+    - How do i get the key
+    - How do i get the  enrollment key
+    - some enrollment key
+    - i need some help
+- intent: Show_enrollment
+  examples: |
+    - Show me how to enroll
+    - Show me how to enroll myself
+    - Show me to enroll  to a course unit
+    - Tell me how to enroll
+    - Tell me how to enroll myself
+    - Tell me to enroll  to a course unit
+    - How do i  enroll  to a course unit
+    - Show me how to use the enrollment key
+    - What do i do with  enrollment key
+    - What do i do with the enrollment key
+    - How do i register on moodle
+    - How do i register on the e-learning platform
+    - how do i enroll myself
+    - how do i enroll for a course unit
+    - What do i need to enroll myself
+    - What do i need to enroll  to a course unit
+    - How do i  enroll  to a course unit
+    - need help  with enrollment
+    - Tell me more about enrollment
+- intent: Dean_science
+  examples: |
+    - who is the dean of science
+    - who is the dean of science faculty
+    - whats the name of the dean for science
+    - How can i reach the dean of science faculty
+- intent: Dean_law
+  examples: |
+    - who is the dean of Law
+    - who is the dean of law faculty
+    - whats the name of the dean for law
+    - How can i reach the dean of law faculty
+- intent: Dean_Education
+  examples: |
+    - who is the dean of education
+    - who is the dean of education faculty
+    - whats the name of the dean for education
+    - How can i reach the dean of education faculty
+- intent: Dean_health_Sciences
+  examples: |
+    - who is the dean of health Sciences
+    - who is the dean of health Sciences faculty
+    - whats the name of the dean for health Sciences
+    - How can i reach the dean of health Sciences faculty
+- intent: Dean_engineering
+  examples: |
+    - who is the dean of Engineering and Applied Sciences
+    - who is the dean of Engineering and Applied Sciences faculty
+    - whats the name of the dean for Engineering and Applied Sciences
+    - How can i reach the dean of Engineering and Applied Sciences faculty
+- intent: Dean_BAM
+  examples: |
+    - who is the dean of Business Administration and Management
+    - who is the dean of BAM
+    - who is the dean of BAM faculty
+    - who is the dean of Business Administration and Management faculty
+    - whats the name of the dean for Business Administration and Management
+    - How can i reach the dean of Business Administration and Management faculty
+- intent: Dean_FOBE
+  examples: |
+    - who is the dean of built  environment
+    - who is the dean of FOBE
+    - who is the dean of FOBE faculty
+    - whats the name of the dean for built  environment
+    - How can i reach the dean of built  environment
+- intent: Dean_Agriculture
+  examples: |
+    - who is the dean of Agriculture
+    - who is the dean of Agric
+    - who is the dean of Agric faculty
+    - whats the name of the dean for Agriculture
+    - How can i reach the dean of Agriculture
+- intent: Software
+  examples: |
+    - What is the enrolment key for software engineering
+    - Give me the enrollment key for  software engineering
+    - enrollment key for  software engineering
+- intent: Ethics
+  examples: |
+    - What is the enrolment key for science, ethics and technology
+    - Give me the enrollment key for  science, ethics and technology
+    - enrollment key for  science, ethics and technology
+- intent: Graphics
+  examples: |
+    - What is the enrolment key for Graphics and animation
+    - Give me the enrollment key for  Graphics and animation
+    - enrollment key for Graphics and animation
+    - key for graphics
+    - enrollment key for graphics
+# - intent: data
+#   examples: |
+#     - How can i add my name to the database
+#     - how do i enroll myself on moodle
+#     - add my name to the database
+#     - How can i put my name in the database
+# - intent: user_name
+#   examples: |
+#     - My name is [Timothy](name)
+#     - Iam called [Wanyela Timothy](name)
+#     - My name is [John](name).
+#     - I am [Jane](name).
+#     - call me [timothy](lname)
+#     - take [timothy](lname)
+#     - it is [timothy](lname)
+# - intent: email_id
+#   examples: |
+#     - My email is [wanyelatimothy@gmail.com](email)
+#     - [wanyelatimothy@gmail.com](email)
+#     - [timothy.wanyela@stud.umu.ac.ug](mail)
+#     - it is [timothy.wanyela@stud.umu.ac.ug](mail)
+#     - take [timothy.wanyela@stud.umu.ac.ug](mail)
+#     - have this [timothy.wanyela@stud.umu.ac.ug](mail)
+#     - here we go [timothy.wanyela@stud.umu.ac.ug](mail)
+- intent: Kasozi
+  examples: |
+    - Who teaches artifical intelligence
+    - which lecturer teaches artifical intelligence
+    - Who teaches Ai
+    - which lecturer teaches AI
+    - Who handles artifical intelligence
+    - who lectures Ai
+    - who lectures artifical intelligence
+    - Who teaches formal methods
+    - which lecturer teaches formal methods
+    - Who teaches
+    - Who handles formal methods
+    - who lectures formal methods
+    - Who teaches digital electronics
+    - which lecturer teaches digital electronics
+    - Who handles digital electronics
+    - who lectures digital electronics
+- intent: Otala
+  examples: |
+    - Who teaches business english
+    - which lecturer teaches business english
+    - Who handles business english
+    - who lectures business english
+    - Who teaches critical thinking
+    - which lecturer teaches critical thinking
+    - Who handles  critical thinking
+    - who lectures critical thinking
+- intent: campuses
+  examples: |
+    - How a many junior campuses does umu have
+    - How a many branches does umu have
+    - list for me all the campuses
+    - Tell me about the number of campuses Uganda Martyrs University has
+    - How a many branches does Uganda Uganda Martyrs UniversityUganda Martyrs University have
+- intent: Students_portal
+  examples: |
+    - How do i access the student portal
+    - Can i also access the student portal from here
+    - How do i reach the student portal
+    - Is this the student portal
+    - Take me to the students portal
+    - How do i reach the students portal
+- intent: UMU_website
+  examples: |
+    - How do i access the main website
+    - Can i also access the umu website from here
+    - How do i reach the umu website
+    - Is this the umu website
+    - Take me to the umu website
+    - How do i reach the main umu website
+- intent: library
+  examples: |
+    - How do i access the library
+    - Can i also access the library from here
+    - How do i reach the library
+    - Is this the library portal
+    - Take me to the kiwanika library
+    - How can i access library resourses
+    - How can i access library
+- intent: help
+  examples: |
+    - I need help
+    - help me please
+    - Some guidence
+    - provide ne with help
+    - some help
+    - i need help
+# - intent: TT
+#   examples: |
+#     - Hi help me with a time table
+#     -ome time table for this semester s
+#     - Help with time table for this sem
+#     - Provide me with the TT
+#     - How can i access the time table for this sem
+
+- intent: umu
+  examples: |
+    - what is umu
+    - what is Uganda Martyrs University
+    - Tell me about umu
+    - Tell me about Uganda Martyrs University
+    - I want to know about umu
+    - Allow me know about umu
+    - what is the history of umu 
+
+- intent:  CFO
+  examples: |
+    - Who is the CFO
+    - Who is the cheif finance officer
+    - show me the CFO
+    - I want to know the CFO
+    - Can i have a look at the CFo
+    -  Who is the CFO of UMU
+
+- intent: VC
+  examples: |
+    - Who is the VC of UMU
+    - Who is the VC of Uganda Martyrs University
+    - I want to know the VC
+    - please show me the VC
+    - Let me have a look at the Vc
+
+- intent: chancellor
+  examples: |
+    - Who is the chancellor of UMU
+    - Who is the chancellor of Uganda Martyrs University
+    - I want to know the chancellor
+    - please show me the chancellor
+    - Let me have a look at the chancellor
+
+
+- intent: DVC
+  examples: |
+    - Who is the DVC of UMU
+    - Who is the DVC of Uganda Martyrs University
+    - I want to know the DVC
+    - please show me the DVC
+    - Let me have a look at the DVC
+    - Who is the Deputy Vice chancellor
+
+- intent: registrar
+  examples: |
+    - Who is the  registrar of UMU
+    - Who is the  registrar of Uganda Martyrs University
+    - I want to know the  registrar
+    - please show me the  registrar
+    - Let me have a look at the  registrar
+
+- intent: HR
+  examples: |
+    - Who is the  HR of UMU
+    - Who is the  HR of Uganda Martyrs University
+    - I want to know the  HR
+    - please show me the  HR
+    - Let me have a look at the  HR
+    - Who is the Human resource manager 
+
+- intent: dean_of_students
+  examples: |
+    - Who is the dean of students
+    - who is students dean
+    - who is the dean of students at umu
+    - show me the students dean 
+    - Tell me about the dean of students 
+
+- intent: updates
+  examples: |
+    - Cisco Webex Teams
+    - update me
+    - provide me some updates
+    - whats new
+    - whats trending 
+
+- intent: Reply 
+  examples: |
+    - Am fine 
+    - Am doing well 
+    - Am fine too
+    - Am fine 
+    - fine
+    - Am okay
+    - Not bad 
+    - Am trying 
+    - Well for now 
+    - well today 
+    - Am cool 
+    - cool 
+    - Pretty cool 
+
+- intent: search 
+  examples: |
+    - How do i search for a course unit
+    - show me how to search
+    - show me how to find a course unit
+    - i don't see  course units
+    - where do i find course units 
+    - how can i access course units
+    - Where is the search bar 
+    - Where do we search from!
+    - where do i search from 
+
+- intent: missing_units
+  examples: |
+    - Am not seeing all my course units 
+    - i don't see my course units 
+    - i don't see other course units 
+    - my course units are missing 
+    - I enrolled myself but the course units are missing 
+    - i don't see some of my course units 
+    
+- intent: Greeting
+  examples: |
+    - how are u
+    - how is you today 
+    - whatsup?
+    - sap 
+    - tsap 
+    - waguan 
+    - yoo 
+    - Are you good 
+    - wewe 
+    - Ayo 
+    

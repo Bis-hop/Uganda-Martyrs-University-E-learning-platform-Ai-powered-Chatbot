@@ -1,0 +1,69 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# - rule: Say `hello` when the user starts a conversation with intent updates
+#   conversation_start: false
+#   steps:
+#   - intent: greet
+#   - action: action_resources_list
+
+# - rule: Activate form
+#   steps:
+#   - intent: TT
+#   - action: student
+#   - active_loop: student
+# #   #Form deactiavtion 
+# - rule: Final form
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: student
+#   steps:
+#   # Form is deactivated
+#   - action: student
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  # - action: utter_submit
+#   - action: utter_slots_values
+  
+
+# - rule: Activate form
+#   steps:
+#   - intent: names
+#   - action: student
+#   - active_loop: student
+
+# - rule: submit form
+# - condition:
+#   - active_loop: student
+#   steps:
+#   - action: student
+#   - active_loop: null
+#   - slot_was_set: 
+#     - requested_slot: null
+#   - action: utter_submit
+#   - action: utter_slots_values 
+
+- rule: Provide HR information
+  steps:
+  - intent: HR
+  - action: utter_HumanResource
+
+- rule: Display carousel
+  steps:
+  - intent: updates # The intent that triggers this rule
+  - action: utter_updates  # The custom action to run
+
+  

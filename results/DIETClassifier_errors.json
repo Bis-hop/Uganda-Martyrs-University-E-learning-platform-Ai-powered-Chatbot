@@ -1,0 +1,58 @@
+[
+  {
+    "text": "My name is Timothy",
+    "entities": [
+      {
+        "start": 11,
+        "end": 18,
+        "value": "Timothy",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "lname",
+        "start": 11,
+        "end": 18,
+        "confidence_entity": 0.5379594564437866,
+        "value": "Timothy",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Iam called Wanyela Timothy",
+    "entities": [
+      {
+        "start": 11,
+        "end": 26,
+        "value": "Wanyela Timothy",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 11,
+        "end": 18,
+        "confidence_entity": 0.5951129794120789,
+        "value": "Wanyela",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "lname",
+        "start": 19,
+        "end": 26,
+        "confidence_entity": 0.4910314381122589,
+        "value": "Timothy",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

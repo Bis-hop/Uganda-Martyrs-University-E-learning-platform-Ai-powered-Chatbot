@@ -1,0 +1,169 @@
+# # The config recipe.
+# # https://rasa.com/docs/rasa/model-configuration/
+# recipe: default.v1
+
+# # The assistant project unique identifier
+# # This default value must be replaced with a unique assistant name within your deployment
+# assistant_id: 20240514-162823-molten-olive
+
+# # Configuration for Rasa NLU.
+# # https://rasa.com/docs/rasa/nlu/components/
+# language: en
+
+# pipeline: null
+# # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
+# # # If you'd like to customize it, uncomment and adjust the pipeline.
+# # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+# #   - name: WhitespaceTokenizer
+# #   - name: RegexFeaturizer
+# #   - name: LexicalSyntacticFeaturizer
+# #   - name: CountVectorsFeaturizer
+# #   - name: CountVectorsFeaturizer
+# #     analyzer: char_wb
+# #     min_ngram: 1
+# #     max_ngram: 4
+# #   - name: DIETClassifier
+# #     epochs: 100
+# #     constrain_similarities: true
+# #   - name: EntitySynonymMapper
+# #   - name: ResponseSelector
+# #     epochs: 100
+# #     constrain_similarities: true
+# #   - name: FallbackClassifier
+# #     threshold: 0.3
+# #     ambiguity_threshold: 0.1
+
+# # Configuration for Rasa Core.
+# # https://rasa.com/docs/rasa/core/policies/
+# policies:
+# # # No configuration for policies was provided. The following default policies were used to train your model.
+# # # If you'd like to customize them, uncomment and adjust the policies.
+# # # See https://rasa.com/docs/rasa/policies for more information.
+# #   - name: MemoizationPolicy
+# #   - name: RulePolicy
+# #   - name: UnexpecTEDIntentPolicy
+# #     max_history: 5
+# #     epochs: 100
+# #   - name: TEDPolicy
+# #     max_history: 5
+# #     epochs: 100
+# #     constrain_similarities: true
+#   # - name: MemoizationPolicy
+#   # - name: RulePolicy
+# #   - name: UnexpecTEDIntentPolicy
+# #     max_history: 5
+# #     epochs: 100
+#   # - name: TEDPolicy
+# #     max_history: 5
+# #     epochs: 100
+# #     constrain_similarities: true
+# # - name: FormPolicy
+recipe: default.v1
+
+assistant_id: 20240514-162823-molten-olive
+
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: custom_intent_classifier.HuggingFaceIntentClassifier
+  - name: HuggingFaceIntentClassifier
+    model_name: "gpt2"
+  - name: custom_response_generator.HuggingFaceResponseGenerator
+    response_model_name: "t5-small"
+  - name: HuggingFaceIntentClassifier
+    model_name: "gpt2"
+  - name: DIETClassifier
+    epochs: 100
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+  # - name: rasa_plus.ml.LLMIntentClassifier
+  #   fallback_intent: "out_of_scope"
+  #   llm:
+  #     model_name: "text-davinci-003"
+  #     temperature: 0.7
+  #     prompt: |
+  #       Label a users message from a conversation with an intent. Reply ONLY with the name of the intent.
+
+  #     The intent should be one of the following:
+  #         - greet
+  #         - goodbye
+  #         - affirm
+  #         - deny
+  #         - mood_great
+  #         - mood_unhappy
+  #         - bot_challenge
+  #         - about_university
+  #         - about_moodle
+  #         - Faculties
+  #         - Education_programmes
+  #         - Science_programmes
+  #         - Law_courses
+  #         - BuiltEnvironment_programmes
+  #         - BAM_programmes
+  #         - Health_sciences_programmes
+  #         - Engineering_programmes
+  #         - Agriculture_programmes
+  #         - Enrollment
+  #         - Enrollment_key
+  #         - Show_enrollment
+  #         - Requirements_to_join_moodle
+  #         - Moodle_login
+  #         - Moodle_Register
+  #         - New_here
+  #         - Dean_science
+  #         - Dean_law
+  #         - Dean_Education
+  #         - Dean_health_Sciences
+  #         - Dean_engineering
+  #         - Dean_BAM
+  #         - Dean_FOBE
+  #         - Dean_Agriculture
+  #         - Software
+  #         - Ethics
+  #         - Graphics
+  #         - add_data
+  #         - Names
+  #         - Email
+  #         - Kasozi
+  #         - Otala
+  #         - campuses
+  #         - Students_portal
+  #         - UMU_website
+  #         - library
+  #         - help
+  #         - Appreciate
+  #       # {% for intent in intents %}- {{intent}}
+  #       # {% endfor %}
+  #       # {% for example in examples %}
+  #       # Message: {{example['text']}}
+  #       # Intent: {{example['intent']}}
+  #       # {% endfor %}
+  #       # Message: {{message}}
+  #       # Intent:
+  #     examples:
+  #         Message: Hello
+  #         Intent: greet
+
+  #     Message: Yes, I am
+  #     Intent: affirm
+
+  #   Message: hey there
+  #   Intent: greet
+
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
+    

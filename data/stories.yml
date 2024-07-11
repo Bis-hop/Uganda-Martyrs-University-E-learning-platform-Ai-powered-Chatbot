@@ -1,0 +1,393 @@
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
+  # - action: action_generate_response
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  # - action: action_question_answering
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: Uganda Martyrs University path
+  steps:
+  - intent: about_university
+  - action: utter_university
+
+
+- story: Faculties path
+  steps:
+  - intent:  Faculties
+  - action: utter_faculty
+  
+
+
+- story: moodle  path
+  steps:
+  - intent: about_moodle
+  - action: utter_moodle
+
+
+- story: education  path
+  steps: 
+  - intent: Education_programmes
+  - action: utter_Education_programmes 
+
+
+- story: Science  path
+  steps: 
+  - intent: Science_programmes
+  - action: utter_Science_programmes
+
+- story: law path
+  steps: 
+  - intent: Law_courses
+  - action: utter_Law_courses
+
+- story: FOBE path
+  steps: 
+  - intent: BuiltEnvironment_programmes
+  - action: utter_BuiltEnvironment_programmes
+
+
+- story: BAM path
+  steps: 
+  - intent: BAM_programmes
+  - action: utter_BAM_programmes
+
+- story: Swasa path
+  steps: 
+  - intent: Health_sciences_programmes
+  - action: utter_Health_sciences_programmes
+  
+- story: Engineering path
+  steps: 
+  - intent: Engineering_programmes
+  - action: utter_Engineering_programmes
+
+- story: Agric path
+  steps: 
+  - intent: Agriculture_programmes
+  - action: utter_Agriculture_programmes
+
+
+- story: Requirements path
+  steps:
+  - intent: Requirements_to_join_moodle
+  - action: utter_requirements
+
+- story: Enrollment path
+  steps: 
+  - intent: results
+  - action: utter_results
+
+- story: Dean_science path
+  steps: 
+  - intent: Dean_science
+  - action: utter_Dean_science
+
+- story: Dean_law path
+  steps: 
+  - intent: Dean_law
+  - action: utter_Dean_law
+
+- story:  Dean_Education path
+  steps: 
+  - intent:  Dean_Education
+  - action: utter_ Dean_Education
+
+- story:  Dean_health_Sciences path
+  steps: 
+  - intent:  Dean_health_Sciences
+  - action: utter_ Dean_health_Sciences
+
+- story:  Dean_engineering path
+  steps: 
+  - intent:  Dean_engineering
+  - action: utter_ Dean_engineering
+
+- story:  Dean_BAM path
+  steps: 
+  - intent:  Dean_BAM
+  - action: utter_Dean_BAM
+
+- story:  Dean_FOBE path
+  steps: 
+  - intent:  Dean_FOBE
+  - action: utter_Dean_FOBE
+
+- story:  Dean_Agriculture path
+  steps: 
+  - intent:  Dean_Agriculture
+  - action: utter_Dean_Agriculture
+
+- story: Software path
+  steps: 
+  - intent: Software
+  - action: utter_Software
+
+- story: Ethics path
+  steps: 
+  - intent: Ethics
+  - action: utter_Ethics
+
+- story: Graphics path
+  steps: 
+  - intent: Graphics
+  - action: utter_Graphics
+
+- story: kasozi path
+  steps: 
+  - intent: Kasozi
+  - action: utter_kasozi 
+
+- story: Otala path
+  steps: 
+  - intent: Otala
+  - action: utter_otala
+
+# - story:  collect info
+#   steps:
+
+  # - intent: greet
+  # - action: utter_greet
+# - story: Get Name path
+#   steps:
+#   - intent: Names
+#   - action: utter_ask_name
+
+# - story: Email path
+#   steps:
+#   - intent: Email
+#   - action: utter_ask_email
+
+  # - active_loop: student
+  # - slot_was_set:
+  #   - name: "John Doe"
+  # - slot_was_set:
+  #   - email: "john.doe@example.com"
+  # - action: utter_submit
+  # - action: utter_goodbye
+
+- story: key path
+  steps:
+  - intent: Enrollment_key
+  - action: utter_key
+- story: Show_enrollment path
+  steps:
+  - intent: Show_enrollment
+  - action: utter_Show_enrollment
+  
+- story: New_here path
+  steps:
+    - intent: New_here
+    - action: utter_New_here
+
+- story: login path
+  steps:
+  - intent: Moodle_login
+  - action: utter_Moodle_login
+
+- story: Register path
+  steps:
+  - intent: Moodle_Register
+  - action: utter_Moodle_Register
+
+- story: campus path
+  steps:
+  - intent: campuses
+  - action: utter_campuses
+
+- story: portal path
+  steps:
+  - intent: Students_portal
+  - action: utter_Students_portal
+
+- story: Website path
+  steps:
+  - intent: UMU_website
+  - action: utter_UMU_website
+
+- story: lib path
+  steps:
+  - intent: library
+  - action: utter_library
+
+- story: help path
+  steps: 
+  - intent: help
+  - action: utter_help
+  
+- story: Appreciate path
+  steps: 
+  - intent: Appreciate
+  - action: utter_Appreciate
+
+# - story: Time table path
+#   steps:
+#   - intent: TT 
+#   - action: utter ask_lname
+  # - intent: email_address
+  #   entities: 
+  #   - lemail: timothy.wanyela@stud.umu.ac.ug
+  # - slot_was_set:
+  #   - mail: timothy.wanyela@stud.umu.ac.ug
+  # - action: utter_say_email_address
+
+
+# - story: lemail path
+#   steps:
+#   - intent: lemail
+#   - action: 
+
+# - story: store data to excel affirm Story
+#   steps:
+#   - intent: add_data
+#   - action: student
+#   - active_loop: student
+#   - intent: affirm
+#   - action: action_save_data
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - slot_was_set:
+#     - name: hey
+#   - slot_was_set:
+#     - email: hey
+#   - action: action_show_carousel
+#   - intent: Enrollment_key
+#   - slot_was_set:
+#     - name: i need help
+#   - slot_was_set:
+#     - email: i need help
+#   - intent: Enrollment_key
+#   - slot_was_set:
+#     - name: i need help
+#   - slot_was_set:
+#     - email: i need help
+#   - intent: help
+#   - action: utter_help
+#   - intent: Dean_science
+#   - slot_was_set:
+#     - name: who is the dean of science
+#   - slot_was_set:
+#     - email: who is the dean of science
+#   - action: utter_Dean_science
+#   - intent: Enrollment_key
+#   - slot_was_set:
+#     - name: some help
+#   - slot_was_set:
+#     - email: some help
+
+- story: umu path
+  steps:
+  - intent: umu
+  - action: utter_history
+
+- story: chancellor path
+  steps:
+  - intent: chancellor
+  - action: utter_head
+
+- story: DVC path
+  steps:
+  - intent: DVC
+  - action: utter_DeputyVC
+
+
+- story: HR path
+  steps:
+  - intent: HR
+  - action: utter_HumanResource
+
+- story: VC path
+  steps:
+  - intent: VC
+  - action: utter_ViceC
+
+- story: greeting path
+  steps: 
+  - intent: Greeting
+  - action: utter_hi
+
+- story: registrar path
+  steps:
+  - intent: registrar
+  - action: utter_Academic_registrar
+
+- story: CFO path
+  steps:
+  - intent: CFO
+  - action: utter_CFO
+
+
+- story: students dean path
+  steps:
+  - intent: dean_of_students
+  - action: utter_dean_of_students
+
+# - story: generate response
+#   steps:
+#   - intent: TT
+#   - action: action_generate_response
+
+# - story: answer question
+#   steps:
+#   - intent: data
+#   - action: action_answer_question
+
+
+- story: updates path
+  steps:
+  - intent: updates
+  - action: utter_updates
+
+# - story: name story 
+#   steps:
+#   - intent: user_name
+#   - action: utter_askname
+#   - slot_was_set:
+#     - name: "YOURNAME"
+#   - action: utter_askemail
+#   - slot_was_set:
+#     - email: 'abc@gmail.com'
+#   - intent: email_id
+#   - action: action_email
+
+- story: reply path
+  steps: 
+  - intent: Reply 
+  - action: utter_reply 
+
+- story: search path
+  steps:
+  - intent: search
+  - action: utter_search
+
+- story: missing path
+  steps: 
+  - intent: missing_units 
+  - action: utter_missing_units
