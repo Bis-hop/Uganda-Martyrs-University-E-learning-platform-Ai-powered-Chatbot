@@ -68,13 +68,13 @@ pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: CountVectorsFeaturizer
-  - name: custom_intent_classifier.HuggingFaceIntentClassifier
-  - name: HuggingFaceIntentClassifier
-    model_name: "gpt2"
-  - name: custom_response_generator.HuggingFaceResponseGenerator
-    response_model_name: "t5-small"
-  - name: HuggingFaceIntentClassifier
-    model_name: "gpt2"
+  # - name: custom_intent_classifier.HuggingFaceIntentClassifier
+  # - name: HuggingFaceIntentClassifier
+  #   model_name: "gpt2"
+  # - name: custom_response_generator.HuggingFaceResponseGenerator
+  #   response_model_name: "t5-small"
+  # - name: HuggingFaceIntentClassifier
+  #   model_name: "gpt2"
   - name: DIETClassifier
     epochs: 100
   - name: EntitySynonymMapper
