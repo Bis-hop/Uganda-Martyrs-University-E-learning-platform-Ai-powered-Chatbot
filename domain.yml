@@ -68,7 +68,7 @@ responses:
   utter_hi: 
     - text: 'Am well, how about you ?'
   utter_greet:
-    - text: 'Hi welcome to the Martyrs Ai Assistant?'
+    - text: 'Hi welcome to the E-learning platform Ai Assistant, how can I help you today?'
       custom:
         payload: dropDown
         data:
@@ -467,6 +467,7 @@ responses:
       You can reach him out on:
       - 0757355841/0774350156
       - Email: bkasozi@umu.ac.ug
+    image: assets/Mr Kasozi Brain.png
   utter_otala:
   - text: |
       - Mrs. Otala Laura
@@ -508,7 +509,7 @@ responses:
   - text: |
       Our history:
       - Uganda Martyrs University (UMU) is a faith-based private University owned by the Episcopal Conference of the Catholic Bishops of Uganda. UMU acknowledges the late Archbishop Kiwanuka as the Father of Catholic higher education in Uganda. It (UMU) is located at Nkozi hill, 82 km west of Kampala, the Capital of Uganda, on the Kampala-Masaka highway. The concept of a Catholic University in Uganda dates back as far as the nineteen forties, when the late Archbishop Joseph Kiwanuka conceived the idea. Unfortunately, various circumstances impeded the foundation of a university at that time. This proposal was renewed during the nineteen eighties, and was endorsed by the Uganda Episcopal Conference in 1989. Consequently, the University was officially launched on 24th March 1991 by His Excellency Yoweri Kaguta Museveni, the President of Uganda. Uganda Martyrs University was granted a provisional license on 17th August 1993, and the first academic year opened on Monday 18th October 1993, the anniversary of the canonization of the Uganda Martyrs. It started with 84 students (28 female and 56 male) from all parts of Uganda admitted in two academic Units, namely the Institute of Ethics and Development Studies and the Faculty of Business Administration and Management. This enrolment has increased unabated over the years. Currently UMU has ten academic units and a Campus or two in the four Catholic Ecclesiastical Provinces, with a number of Affiliate Institutions. On 18th October 1993, the University was officially opened in the presence of His Excellency, the President of Uganda, Yoweri K. Museveni, the Uganda Catholic Bishops, the Minister of Education and Sports, and a host of friends and well-wishers. Uganda Martyrs University is fully recognised by the Ministry of Education and Sports in Uganda and the awards conferred are autonomous. The University was granted a Charter confirmed with a Certificate issued by National Council for Higher Education was on 3rd December, 2004 and signed by the President of Republic of Uganda on 2nd April 2005. Uganda Martyrs University opened in October 1993 with 84 students and two academic departments. Currently, UMU has 7 Faculties, 1 Institute, 3 Schools, 3 Directorates; and about 5,000 students, of whom about 1,500 are full-time residents on campus. The remaining 2,500 and 1,000 participate in distance learning and part-time programmes respectively at the University campuses in Kabale, Kampala, Masaka, Mbale and Lira.
-    attachment: { "type":"video",  "payload":{ "title":" Watch a brief about the history of the university","src":" https://youtu.be/ZbahOyQ0GkU" } }
+    attachment: { "type":"video",  "payload":{ "title":" Watch a brief about the history of the university","src":" assets/y2mate.com - Brief History of Uganda Martyrs University_v720P.mp4" } }
 
   utter_dean_of_students:
   - text: |

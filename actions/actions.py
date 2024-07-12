@@ -861,6 +861,9 @@
 #         return []
 
 
+# import sendgrid
+# from sendgrid.helpers.mail import *
+import os
 from typing import Any, Coroutine, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -949,26 +952,26 @@ class ActionCarousel(Action):
                 "template_type": "generic",
                 "elements": [
                     {
-                        "title": "Carousel 1",
-                        "subtitle": "$10",
+                        "title": "Need help",
+                        "subtitle": "Contact",
                         "image_url": "assets/blue_head.jpg",
                         "buttons": [
                             {
                                 "title": "Hi",
-                                "payload": "Hi",
-                                "type": "postback"
+                                "payload": "/greet",
+                                
                             }
                         ]
                     },
                     {
-                        "title": "Carousel 2",
-                        "subtitle": "$20",
-                        "image_url": "assets/blue_head.jpg",
+                        "title": "Admissions",
+                        "subtitle": "Apply Now",
+                        "image_url": "assets/admissions.jpeg",
                         "buttons": [
                             {
                                 "title": "Hello",
-                                "payload": "Hello",
-                                "type": "postback"
+                                "payload": "/greet",
+                            
                             }
                         ]
                     }
@@ -977,3 +980,14 @@ class ActionCarousel(Action):
         }
         dispatcher.utter_message(json_message=message)
         return []
+
+# sg = sendgrid.SendGridAPIClient(api_key=os.environ.get(''))
+# from_email = Email("wanyelatimothy@gmail.com")
+# to_email = To("tnicovas@gmail.com")
+# subject = "TIME TABLE"
+# content = Content("text/plain", "Please receive the Time table attached on this email for semester 2")
+# mail = Mail(from_email, to_email, subject, content)
+# response = sg.client.mail.send.post(request_body=mail.get())
+# print(response.status_code)
+# print(response.body)
+# print(response.headers)
