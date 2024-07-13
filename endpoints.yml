@@ -11,7 +11,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
-url: "http://localhost:5055/webhook"
+url: "http://16.171.24.14/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
@@ -44,5 +44,11 @@ log_level: DEBUG
 cors:
   allow_origins:
     - "*"
+models:
+  url: "http://16.171.24.14:5005/"
+tracker_store:
+  url: "16.171.24.14"
+event_broker:
+  url: "16.171.24.14"
 
 
