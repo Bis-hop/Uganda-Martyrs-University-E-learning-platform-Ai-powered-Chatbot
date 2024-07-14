@@ -64,21 +64,24 @@ intents:
 - search
 - missing_units
 - Greeting
+
 responses:
+
   utter_hi: 
     - text: 'Am well, how about you ?'
   utter_greet:
     - text: 'Hi welcome to the E-learning platform Ai Assistant, how can I help you today?'
-      custom:
-        payload: dropDown
-        data:
-        - label: option1
-          value: "/goodbye{'slot_name':'option1'}"
-        - label: option2
-          value: "/goodbye{'slot_name':'option2'}"
-        - label: option3
-          value: "/updates{'slot_name':'option3'}"
-      # image: assets/sponsor.jpeg 
+      image: assets/sponsor.jpeg 
+      # custom:
+      #   payload: dropDown
+      #   data:
+      #   - label: option1
+      #     value: "/goodbye{'slot_name':'option1'}"
+      #   - label: option2
+      #     value: "/goodbye{'slot_name':'option2'}"
+      #   - label: option3
+      #     value: "/updates{'slot_name':'option3'}"
+    
   # - custom:
   #     payload: "carousel"
   #     data:
@@ -138,11 +141,12 @@ responses:
   - text: Great, carry on!
   utter_goodbye:
   - text: Bye
-    custom: 
-        payload: pdf_attachment
-        title: "PDF Title"
-        url: "URL to PDF file"
-    # image: assets/Motion.gif
+    image: assets/Motion.gif
+    # custom: 
+        # payload: pdf_attachment
+        # title: "PDF Title"
+        # url: "URL to PDF file"
+  
   utter_iamabot:
   - text:  |
       I am the Martyrs AI Assistant created to provide virtual assistance to the students and staff  on the Uganda Martyrs University E-learning platform ,
@@ -171,7 +175,7 @@ responses:
   utter_UMU_website:
   - text: "To access the Students Uganda Martyrs official website [Click here](https://umu.ac.ug/new/)"
     buttons:
-    - title: '  [Go to the UMU official website](https://umu.ac.ug/new/)'
+    - title: '  Go to the UMU official website'
       payload: "https://umu.ac.ug/new/" 
       # type: web_url
       # url: https://umu.ac.ug/new/
