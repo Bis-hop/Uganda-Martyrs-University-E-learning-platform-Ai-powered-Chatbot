@@ -114,7 +114,7 @@
         .rw-launcher
         </style>
     </head>
-    <body style="background-image: url('assets/Moodle new.png');"></body>
+    <body /style="background-image: url('assets/Moodle new.png');"></body>
 <script>
     !(function () {
         let e = document.createElement("script"),
@@ -126,7 +126,7 @@
                 {
                     customData: { language: "en" }, // Example custom data
                     initPayload: "/greet", // Ensure you have a greet intent configured in Rasa
-                    socketUrl: "http://16.171.24.143:5005", 
+                    socketUrl: "http://13.60.53.153:5005", 
                     /*socketUrl: "http://16.171.24.143:5005", */
                     profileAvatar: "/assets/umu.jpg",
                     botAvatar: '/assets/robot.jpg',
@@ -166,6 +166,8 @@
                     toggleChat: true,
                     tooltipSent: true,
                     disableTooltips:false,
+                    tooltipPayload: '/goodbye', // Set this to the payload you want to send to trigger the tooltip
+                    tooltipDelay: 10,
                     showCloseButton: true,
                     showFullScreenButton: true,
                     disabledInput: false,
